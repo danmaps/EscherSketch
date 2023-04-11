@@ -10,8 +10,6 @@ power_of_2 = int(math.pow(2, n)) # Calculate 2^n
 canvas_size = 500
 num_tiles = power_of_2
 
-print(num_tiles)
-
 tile_size = canvas_size // num_tiles
 
 # Initialize a new SVG drawing
