@@ -17,6 +17,8 @@ dwg = svgwrite.Drawing(filename="truchet_tiles.svg", size=(canvas_size, canvas_s
 
 # define color options
 color_options = ['black', 'red', 'blue', 'green', 'orange', 'grey', 'teal', 'pink', 'yellow']
+subset_of_colors = random.sample(color_options,4)
+print(subset_of_colors)
 
 def draw_truchet(num_tiles=num_tiles):
     # Draw the tiles
@@ -35,7 +37,7 @@ def draw_truchet(num_tiles=num_tiles):
                 path_data = f"M {(i+1)*tile_size},{j*tile_size} L {(i+1)*tile_size},{(j+1)*tile_size} L {i*tile_size},{(j+1)*tile_size} Z"
                 if random.random() > 0.5:
                     path_data = f"M {(i+1)*tile_size},{j*tile_size} L {(i+1)*tile_size},{(j+1)*tile_size} L {i*tile_size},{j*tile_size} Z"
-            dwg.add(dwg.path(d=path_data, fill=random.choice(color_options)))
+            dwg.add(dwg.path(d=path_data, fill=random.choice(subset_of_colors)))
 
     # Save the SVG drawing
     dwg.save()
