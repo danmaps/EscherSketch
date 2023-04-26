@@ -17,7 +17,7 @@ dwg = svgwrite.Drawing(filename="truchet_tiles.svg", size=(canvas_size, canvas_s
 
 # define color options
 color_options = ['black', 'red', 'blue', 'green', 'orange', 'grey', 'teal', 'pink', 'yellow']
-subset_of_colors = random.sample(color_options,4)
+subset_of_colors = random.sample(color_options,5)
 print(subset_of_colors)
 
 def draw_truchet(num_tiles=num_tiles):

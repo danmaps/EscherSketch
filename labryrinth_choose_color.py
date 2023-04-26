@@ -9,9 +9,13 @@ tile_size = 50
 color_options = ['black', 'red', 'blue', 'green', 'orange']
 
 stroke=random.choice(color_options)
-fill=random.choice(['black','white'])
+if stroke == 'black':
+    fill = 'white'
+else:
+    fill=random.choice(['black','white'])
 
 def create_labyrinth(grid_size=grid_size,tile_size=tile_size,stroke=stroke,fill=fill):
+    print(stroke,fill)
 
     # create a new SVG drawing
     dwg = svgwrite.Drawing(filename='labyrinth_in_color.svg', size=(grid_size*tile_size, grid_size*tile_size))
@@ -33,4 +37,5 @@ def create_labyrinth(grid_size=grid_size,tile_size=tile_size,stroke=stroke,fill=
     # save the drawing
     dwg.save()
 
-create_labyrinth(stroke='green',fill='black')
+# create_labyrinth(stroke='green',fill='black')
+create_labyrinth()
