@@ -13,7 +13,7 @@ num_tiles = power_of_2
 tile_size = canvas_size // num_tiles
 
 # Initialize a new SVG drawing
-dwg = svgwrite.Drawing(filename="truchet_tiles.svg", size=(canvas_size, canvas_size))
+dwg = svgwrite.Drawing(filename=r"out\truchet_tiles.svg", size=(canvas_size, canvas_size))
 
 # define color options
 color_options = ['black', 'red', 'blue', 'green', 'orange', 'grey', 'teal', 'pink', 'yellow']
